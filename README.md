@@ -1,4 +1,5 @@
 # Series
+[![Build Status](https://travis-ci.org/pducks32/series.svg)](https://travis-ci.org/pducks32/series)
 
 ## Installation
 
@@ -18,7 +19,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "series"
+
+series = Series.new { |n| Rational(1, 2 * n) }
+series[1] #=> (1/2)
+series[2] #=> (1/4)
+series.partial_sum(5) #=> (137/120)
+
+# You can even provide an upper bound
+series = Series.new(upper_bound: 3) { |n| Rational(1, 2 * n) }
+series[1] #=> (1/2)
+series[2] #=> (1/4)
+# Although you can still evaluate the expression at any `n` solving will halt at the bound
+series[4] #=> (1/16)
+series.first(8) #=> [ (1/2), (1/4), (1/9)]
+series.partial_sum(5) #=> (137/120)
+
+# Lower bounds work too!
+series = Series.new(lower_bound: 3) { |n| Rational(1, 2 * n) }
+series.first #=> (1/9)
+```
 
 ## Development
 
@@ -28,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/series.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pducks32/series.
 
 
 ## License
