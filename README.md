@@ -1,6 +1,10 @@
 # Series
 [![Build Status](https://travis-ci.org/pducks32/series.svg)](https://travis-ci.org/pducks32/series)
 
+Hi, this is a ruby gem to help with math homework! I've been using a hacky version of this for years and thought I'd clean it up and release it as it might be useful to others.
+
+Next I really want it to be able to figure out convergence. It's an awfully hard task with many ways to do them so I'd be open to suggestions/help. You can see some of my thoughts down below!
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -40,6 +44,12 @@ series.partial_sum(5) #=> (137/120)
 series = Series.new(lower_bound: 3) { |n| Rational(1, 2 * n) }
 series.first #=> (1/9)
 ```
+
+## Convergence / Divergence
+
+Just finding the result at `n` or the partial sum of `n` isn't all that interesting; finding if a series is convergent or not is.
+
+There are so many possible ways to go about this, but since this is more geared towards students I think the best approach would be to have it run a bunch of convergence tests and be able to say why one worked or failed. To do this though it has to do operations on the expression which requires it to *know* about the expression so I've started another gem called Fluatica to help write fluent expressions that this library can then manipulate to test for convergence.
 
 ## Development
 
