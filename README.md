@@ -49,7 +49,7 @@ series.first #=> (1/9)
 
 Just finding the result at `n` or the partial sum of `n` isn't all that interesting; finding if a series is convergent or not is.
 
-There are so many possible ways to go about this, but since this is more geared towards students I think the best approach would be to have it run a bunch of convergence tests and be able to say why one worked or failed. To do this though it has to do operations on the expression which requires it to *know* about the expression so I've started another gem called Fluatica to help write fluent expressions that this library can then manipulate to test for convergence.
+There are so many possible ways to go about this, but since this is more geared towards students I think the best approach would be to have it run a bunch of convergence tests and be able to say why one worked or failed. To do this though it has to do operations on the expression which requires it to *know* about the expression so I've started another gem called [Nelson](https://github.com/pducks32/nelson) to help write fluent expressions that this library can then manipulate to test for convergence.
 
 ## Development
 
