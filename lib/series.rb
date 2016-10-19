@@ -5,7 +5,7 @@ class Series
 
   attr_accessor :lower_bound, :upper_bound, :expression
 
-  def initialize(lower_bound: 1, upper_bound: Float::INFINITY, &expression)
+  def initialize(range = 1..Float::INFINITY, lower_bound: range.min, upper_bound: range.max, &expression)
     @expression = expression
     @enumerator = expression_to_enum
     @lower_bound = lower_bound
@@ -25,6 +25,10 @@ class Series
     take(bound).reduce(:+)
   end
 
+  def sum
+    raise RangeError.new("Cannot sum upto INFINITY") if upper_bound == Float::INFINITY
+    reduce(:+)
+  end
 
   private
 
