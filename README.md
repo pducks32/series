@@ -5,6 +5,7 @@ Hi, this is a ruby gem to help with math homework! I've been using a hacky versi
 
 Next I really want it to be able to figure out convergence. It's an awfully hard task with many ways to do them so I'd be open to suggestions/help. You can see some of my thoughts down below!
 
+
 ## Installation
 
 Add this line to your application's Gemfile:
