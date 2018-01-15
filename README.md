@@ -1,7 +1,7 @@
 # Series
 [![Build Status](https://travis-ci.org/pducks32/series.svg)](https://travis-ci.org/pducks32/series) [![Gem Version](https://badge.fury.io/rb/series.svg)](http://badge.fury.io/rb/series)
 
-Hi, this is a ruby gem to help with math homework! I've been using a hacky version of this for years and thought I'd clean it up and release it as it might be useful to others.
+Hi, this is a ruby gem to help with math homework for an ODE's class! I've been using a hacky version of this for years and thought I'd clean it up and release it as it might be useful to others.
 
 Next I really want it to be able to figure out convergence. It's an awfully hard task with many ways to do them so I'd be open to suggestions/help. You can see some of my thoughts down below!
 
